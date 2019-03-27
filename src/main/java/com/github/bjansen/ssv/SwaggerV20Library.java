@@ -36,7 +36,7 @@ import static com.github.fge.msgsimple.load.MessageBundles.getBundle;
  * Library that extends the JSON Schema v4 and adds the additional keywords introduced by the
  * OpenAPI / Swagger v2.0 specification.
  */
-class SwaggerV20Library {
+public class SwaggerV20Library {
 
     private SwaggerV20Library() { }
 
