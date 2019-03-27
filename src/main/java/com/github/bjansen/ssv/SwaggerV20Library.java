@@ -42,7 +42,7 @@ public class SwaggerV20Library {
 
     private static final String OAI_V2_METASCHEMA_URI = "https://openapis.org/specification/versions/2.0#";
 
-    private static Library get() {
+    public static Library get() {
         // The discriminator validator holds state that may persist in the event of a runtime exception etc.
         // Re-create the library to ensure this state doesn't persist between validations.
         return DraftV4Library.get().thaw()
@@ -61,7 +61,7 @@ public class SwaggerV20Library {
      * @return A {@link JsonSchemaFactory} instance configured with the OpenAPI / Swagger V20 metaschema library suitable
      * for use in validating OpenAPI / Swagger documents
      */
-    static JsonSchemaFactory schemaFactory(final LogLevel logLevel, final LogLevel exceptionThreshold) {
+    public static JsonSchemaFactory schemaFactory(final LogLevel logLevel, final LogLevel exceptionThreshold) {
         return JsonSchemaFactory
             .newBuilder()
             .setValidationConfiguration(
